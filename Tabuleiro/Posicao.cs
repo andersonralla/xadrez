@@ -17,6 +17,10 @@ namespace tabuleiro
         {
             return linha + ", " + coluna;
         }
+
+        public void definirValores(int linha, int coluna) 
+        {
+        }
     }
 
 
