@@ -1,9 +1,8 @@
-﻿
-
-namespace tabuleiro
+﻿namespace tabuleiro
 {
     class Posicao
     {
+
         public int linha { get; set; }
         public int coluna { get; set; }
 
@@ -13,17 +12,17 @@ namespace tabuleiro
             this.coluna = coluna;
         }
 
+        public void definirValores(int linha, int coluna)
+        {
+            this.linha = linha;
+            this.coluna = coluna;
+        }
+
         public override string ToString()
         {
-            return linha + ", " + coluna;
-        }
-
-        public void definirValores(int linha, int coluna) 
-        {
+            return linha
+                + ", "
+                + coluna;
         }
     }
-
-
 }
-
-
