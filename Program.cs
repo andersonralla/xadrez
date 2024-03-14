@@ -1,5 +1,4 @@
-﻿using JogoXadrez;
-using System;
+﻿using System;
 using tabuleiro;
 using xadrez;
 
