@@ -70,13 +70,15 @@ namespace xadrez
                 xeque = false;
             }
 
-            if (testeXequeMate(adversaria(jogadorAtual)))
+            if (testeXequemate(adversaria(jogadorAtual)))
             {
                 terminada = true;
             }
-
-            turno++;
-            mudaJogador();
+            else
+            {
+                turno++;
+                mudaJogador();
+            }
         }
 
         public void validarPosicaoDeOrigem(Posicao pos)
@@ -184,7 +186,7 @@ namespace xadrez
             return false;
         }
 
-        public bool testeXequeMate(Cor cor)
+        public bool testeXequemate(Cor cor)
         {
             if (!estaEmXeque(cor))
             {
@@ -224,10 +226,11 @@ namespace xadrez
         private void colocarPecas()
         {
             colocarNovaPeca('c', 1, new Torre(tab, Cor.Branco));
-            colocarNovaPeca('b', 8, new Torre(tab, Cor.Preta));
-            colocarNovaPeca('h', 7, new Torre(tab, Cor.Branco));
             colocarNovaPeca('d', 1, new Rei(tab, Cor.Branco));
+            colocarNovaPeca('h', 7, new Torre(tab, Cor.Branco));
+
             colocarNovaPeca('a', 8, new Rei(tab, Cor.Preta));
+            colocarNovaPeca('b', 8, new Torre(tab, Cor.Preta));
         }
     }
 }
