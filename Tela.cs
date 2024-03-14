@@ -16,12 +16,16 @@ namespace JogoXadrez
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardando Jogada " + partida.jogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("Xeque!");
+            }
         }
 
         public static void imprimirPecasCapturadas( PartidaDeXadrez partida)
         {
             Console.WriteLine("Peças Capturadas:");
-            Console.WriteLine("Brancas: ");
+            Console.WriteLine("Brancos: ");
             imprimirConjunto(partida.pecasCapturadas(Cor.Branco));
             Console.WriteLine();
             Console.WriteLine("Pretas: ");
