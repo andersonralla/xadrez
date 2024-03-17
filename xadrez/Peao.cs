@@ -32,7 +32,7 @@ namespace xadrez
 
             Posicao pos = new Posicao(0, 0);
 
-            if (cor == Cor.Branca)
+            if (cor == Cor.Branco)
             {
                 pos.definirValores(posicao.linha - 1, posicao.coluna);
                 if (tab.posicaoValida(pos) && livre(pos))

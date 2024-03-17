@@ -33,8 +33,8 @@ namespace xadrez_console
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida)
         {
             Console.WriteLine("Peças capturadas:");
-            Console.Write("Brancas: ");
-            imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
+            Console.Write("Brancos: ");
+            imprimirConjunto(partida.pecasCapturadas(Cor.Branco));
             Console.WriteLine();
             Console.Write("Pretas: ");
             ConsoleColor aux = Console.ForegroundColor;
@@ -114,7 +114,7 @@ namespace xadrez_console
             }
             else
             {
-                if (peca.cor == Cor.Branca)
+                if (peca.cor == Cor.Branco)
                 {
                     Console.Write(peca);
                 }
